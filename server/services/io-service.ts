@@ -23,6 +23,8 @@ class IoService {
                 if(await stockService.addData(stock)){
                     const data = await stockService.getData();
                     io.emit("data", data);
+                } else {
+                  socket.emit("error", "Max stocks constraint violated")
                 }
             }
         } catch(e: any) {

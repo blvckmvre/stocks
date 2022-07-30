@@ -51,7 +51,7 @@ const App:FC = () => {
   return (
     <div className='py-20 flex flex-col h-full w-4/5 max-w-2xl gap-5 m-auto text-slate-600'>
       {isLoading && <Loading />}
-      {error && <p className='text-center bold text-red-700'>{error}</p>}
+      {error && <p className='text-center font-bold text-red-700'>{error}</p>}
       <h1 className='text-center font-bold text-2xl'>Stock Market Trends</h1>
       <h2 className='text-center text-xl'>5 stocks max</h2>
       <AddField add={add} input={input} setInput={setInput} />
